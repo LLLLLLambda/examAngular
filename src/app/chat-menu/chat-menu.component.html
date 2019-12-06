@@ -1,4 +1,6 @@
 <div class="menu">
     <h2>Salons</h2>
-    <a class="salon" *ngFor="let salon of salons" [routerLink]="['/salon', salon.id]">{{salon.name}}</a>
+    <div *ngIf="!!_pseudo">
+        <a class="salon" *ngFor="let salon of salons" [routerLink]="['/salon', salon.id]">{{salon.name}}</a>
+    </div>
 </div>

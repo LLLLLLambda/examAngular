@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../chat.service';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-chat-menu',
@@ -8,19 +9,21 @@ import { ChatService } from '../chat.service';
 })
 export class ChatMenuComponent implements OnInit {
   salons: Salon[]
+  _pseudo: string
 
-  constructor(private chatService: ChatService) { }
+  constructor(private loginService: LoginService, private chatService: ChatService) { }
 
   ngOnInit() {
+    //recupere tous les salons
     this.chatService.getSalons().subscribe(
       (salons: Salon[]) => {
         this.salons = salons;
       }
     )
-  }
-
-  afficheSalon(id: number){
-    console.log('affiche ce salon ', id)
+    //recupere le pseudo
+    this.loginService.findUser().subscribe(
+      (users: User[]) => this._pseudo = users[0].pseudo
+      )
   }
 
 }

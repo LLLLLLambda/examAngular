@@ -6,3 +6,7 @@
 a:hover {
     cursor: pointer;
 }
+
+.menu {
+    float: left;
+}

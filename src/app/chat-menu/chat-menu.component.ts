@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ChatService } from '../chat.service';
 import { LoginService } from '../login.service';
 
@@ -9,9 +9,9 @@ import { LoginService } from '../login.service';
 })
 export class ChatMenuComponent implements OnInit {
   salons: Salon[]
-  _pseudo: string
 
-  constructor(private loginService: LoginService, private chatService: ChatService) { }
+  constructor(private loginService: LoginService,
+    private chatService: ChatService) { }
 
   ngOnInit() {
     //recupere tous les salons
@@ -20,10 +20,9 @@ export class ChatMenuComponent implements OnInit {
         this.salons = salons;
       }
     )
-    //recupere le pseudo
-    this.loginService.findUser().subscribe(
-      (users: User[]) => this._pseudo = users[0].pseudo
-      )
   }
+
+  @Input()
+  _pseudo: string;
 
 }

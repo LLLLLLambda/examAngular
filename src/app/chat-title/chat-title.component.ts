@@ -13,6 +13,7 @@ export class ChatTitleComponent implements OnInit {
   constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
+    //a refacto comme dans menu pour evite la requete http
     this.loginService.findUser().subscribe(
       (users: User[]) => this._pseudo = users[0].pseudo
       )

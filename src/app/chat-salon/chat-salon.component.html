@@ -2,7 +2,12 @@
     <app-chat-title></app-chat-title>
 </header>
 <div class='menu'>
-    <app-chat-menu></app-chat-menu>
+    <app-chat-menu [_pseudo]="_pseudo"></app-chat-menu>
+</div>
+<div *ngIf="!!idChannel" class="messages">
+    <!--possibilité de creer une enum ou un pipe en dur ou encore une autre variable etc-->
+    <h2>Channel numero : {{idChannel}}</h2>
+    <p *ngFor="let m of _messages">{{m.pseudo}} : {{m.contenu}}</p>
 </div>
 
 <router-outlet></router-outlet>

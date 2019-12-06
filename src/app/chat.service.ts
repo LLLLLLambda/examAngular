@@ -12,8 +12,8 @@ export class ChatService {
 
   constructor(private http: HttpClient) { }
 
-  refreshMessages(){
-
+  refreshMessages(): Observable<Message[]>{
+    return this.http.get<Message[]>('http://localhost:3000/messages')
   }
 
   sendMessage(){

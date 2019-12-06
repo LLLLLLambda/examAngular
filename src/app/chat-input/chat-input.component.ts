@@ -20,7 +20,9 @@ export class ChatInputComponent implements OnInit {
   }
 
   addMessage() {
-    this.chatService.sendMessage(this._pseudo, this.newMessage, this._isSalon)
+    this.chatService.sendMessage(this._pseudo, this.newMessage, this._isSalon).subscribe()
+    this.newMessage = ""
+    //Reste a rafrichir la liste etc
   }
 
 }

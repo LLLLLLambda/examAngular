@@ -1,48 +1,70 @@
 {
-    "channels": [{
-            "id": 1,
-            "name": "Général"
-        },
-        {
-            "id": 2,
-            "name": "BDE"
-        },
-        {
-            "id": 3,
-            "name": "Vie étudiante"
-        },
-        {
-            "id": 4,
-            "name": "Programmation"
-        }
-    ],
-    "messages": [{
-            "id": 1,
-            "pseudo": "root",
-            "contenu": "llllllll",
-            "idSalon": 1
-        },
-        {
-            "id": 2,
-            "pseudo": "root",
-            "contenu": "llllllll",
-            "idSalon": 4
-        },
-        {
-            "id": 3,
-            "pseudo": "root",
-            "contenu": "llllllll",
-            "idSalon": 2
-        },
-        {
-            "id": 4,
-            "pseudo": "root",
-            "contenu": "llllllll",
-            "idSalon": 2
-        }
-    ],
-    "session": [{
-        "pseudo": "root",
-        "id": 1
-    }]
+  "channels": [
+    {
+      "id": 1,
+      "name": "Général"
+    },
+    {
+      "id": 2,
+      "name": "BDE"
+    },
+    {
+      "id": 3,
+      "name": "Vie étudiante"
+    },
+    {
+      "id": 4,
+      "name": "Programmation"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "pseudo": "root",
+      "contenu": "llllllll",
+      "idSalon": 1
+    },
+    {
+      "id": 2,
+      "pseudo": "root",
+      "contenu": "llllllll",
+      "idSalon": 4
+    },
+    {
+      "id": 3,
+      "pseudo": "root",
+      "contenu": "llllllll",
+      "idSalon": 2
+    },
+    {
+      "id": 4,
+      "pseudo": "root",
+      "contenu": "llllllll",
+      "idSalon": 2
+    },
+    {
+      "pseudo": "root",
+      "contenu": "bbb",
+      "isSalon": 4,
+      "id": 5
+    },
+    {
+      "pseudo": "root",
+      "contenu": "ht",
+      "isSalon": 4,
+      "id": 6
+    },
+    {
+      "pseudo": "root",
+      "contenu": "jj",
+      "isSalon": 4,
+      "id": 7
+    }
+  ],
+  "session": [
+    {
+      "pseudo": "root",
+      "id": 1
+    }
+  ]
 }

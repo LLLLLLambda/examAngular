@@ -25,8 +25,7 @@ export class ChatLoginComponent implements OnInit {
   handleClickLogin(){
     if(!!this._pseudo) {
       let _user = {pseudo: this._pseudo, id: 1}
-      this.loginService.updateUser(_user).subscribe()
-      this.router.navigateByUrl('/salon')
+      this.loginService.updateUser(_user).subscribe(() => this.router.navigateByUrl('/salon'))
     }
   }
 

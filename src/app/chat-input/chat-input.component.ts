@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ChatService } from '../chat.service';
 
 @Component({
   selector: 'app-chat-input',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-input.component.css']
 })
 export class ChatInputComponent implements OnInit {
+  newMessage: string;
 
-  constructor() { }
+  @Input()
+  _pseudo: string;
+  @Input()
+  _isSalon: number;
+
+  constructor(private chatService: ChatService) { }
 
   ngOnInit() {
+  }
+
+  addMessage() {
+    this.chatService.sendMessage(this._pseudo, this.newMessage, this._isSalon)
   }
 
 }

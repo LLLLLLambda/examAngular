@@ -15,9 +15,8 @@ export class ChatService {
   refreshMessages(): Observable<Message[]>{
     return this.http.get<Message[]>('http://localhost:3000/messages')
   }
-
-  sendMessage(){
-
+  sendMessage(pseudo: string, contenu: string, isSalon: number): Observable<Message> {
+    return this.http.post<Message>('http://localhost:3000/messages', {pseudo: pseudo, contenu: contenu, isSalon: isSalon})
   }
 
   getSalons(): Observable<Salon[]>{

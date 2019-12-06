@@ -8,6 +8,8 @@
     <!--possibilité de creer une enum ou un pipe en dur ou encore une autre variable etc-->
     <h2>Channel numero : {{idChannel}}</h2>
     <p *ngFor="let m of _messages">{{m.pseudo}} : {{m.contenu}}</p>
+    <app-chat-input [_pseudo]="_pseudo" [_isSalon]="idChannel"></app-chat-input>
 </div>
+
 
 <router-outlet></router-outlet>

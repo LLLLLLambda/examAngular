@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
 import { ChatLoginComponent } from './chat-login/chat-login.component';
 import { ChatSalonComponent } from './chat-salon/chat-salon.component';
+import { ChatTitleComponent } from './chat-title/chat-title.component';
 
 const appRoutes: Routes = [
   { path: 'salon', component: ChatSalonComponent },
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ChatLoginComponent,
-    ChatSalonComponent
+    ChatSalonComponent,
+    ChatTitleComponent
   ],
   imports: [
     BrowserModule,

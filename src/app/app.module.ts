@@ -14,7 +14,7 @@ import { ChatMenuComponent } from './chat-menu/chat-menu.component';
 
 const appRoutes: Routes = [
   { path: 'salon', component: ChatSalonComponent },
-
+  { path: 'salon/:id', component: ChatSalonComponent },
   { path: '**', component: ChatLoginComponent },
 ]
 

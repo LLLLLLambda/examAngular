@@ -1,0 +1,8 @@
+.salon {
+    display: block;
+    margin: 10px;
+}
+
+a:hover {
+    cursor: pointer;
+}
